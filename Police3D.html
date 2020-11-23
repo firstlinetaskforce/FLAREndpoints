@@ -1,0 +1,41 @@
+<!-- Import the component -->
+<script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+<script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
+<script type="module" src="https://unpkg.com/focus-visible@5.1.0/dist/focus-visible.js"></script>
+<!-- Use it like any other HTML element -->
+<model-viewer src="assets/police-car/scene.gltf"  alt="A 3D model of an astronaut" auto-rotate camera-controls></model-viewer>
+<div id="rotate"></div>
+<style>
+    model-viewer{
+    position: absolute;
+    width: 80%;
+    height: 80%;
+    padding-left: 20%;
+    padding-top: 18%;
+    --poster-color: transparent;
+  }
+
+  .userInput:focus {
+    outline: none !important;
+  }
+
+  body {
+    background-image: url("assets/policestation.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  #rotate {
+    display: none;
+}
+@media screen and (max-width: 800px) {
+    #rotate {
+        background-color: rgba(0,0,0,0.5);
+        display: block;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        width: 100%;
+    }
+}
+</style>
