@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <style>
+            div{
+                width: 200px;
+            }
+            .model{
+                height: 500px;
+                margin: auto;
+                width: 100%;
+                display: block;
+                margin-left: auto;
+            }
+            h1{
+            text-align: center;
+            
+            }
+        </style>
+
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>3D Viewer</title>
+    </head>
+    <body>
+        <!-- All you need to put beautiful, interactive 3D content on your site: -->
+        <!-- Google Model View Tag does all the work! add tag and tag contents 
+        Here is the site for more help: https://modelviewer.dev/-->
+      
+      
+      <div class="model">
+        <model-viewer class="model" 
+                 
+                      src="https://cdn.glitch.com/36cb8393-65c6-408d-a538-055ada20431b/Astronaut.glb?1542147958948"
+                      ios-src="https://cdn.glitch.com/36cb8393-65c6-408d-a538-055ada20431b/Astronaut.usdz?v=1569545377878"
+                      poster="https://cdn.glitch.com/36cb8393-65c6-408d-a538-055ada20431b%2Fposter-astronaut.png?v=1599079951717"
+                      alt="A 3D model of an astronaut"
+                      shadow-intensity="1"
+                      camera-controls
+                      auto-rotate 
+                      ar>
+        </model-viewer>
+
+        <section class="attribution">
+            <span width>
+              <h1 >Astronaut</h1>
+            </span>    
+        </section>
+
+
+        <!-- 💁 Include both scripts below to support all browsers! -->
+
+        <!-- Loads <model-viewer> for modern browsers: -->
+        <script type="module"
+        src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js">
+        </script>
+
+        <!-- Loads <model-viewer> for old browsers like IE11: -->
+        <script nomodule
+        src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js">
+        </script>
+    </body>
+</html>
